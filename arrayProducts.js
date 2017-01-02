@@ -1,3 +1,4 @@
+//TIME COMPLEXITY: O(N2) double loop
 // function arrayProducts(array) {
 //   var result = [];
    
@@ -15,21 +16,22 @@
 //   return result;
 // }
 
-// console.log(arrayProducts([1, 2, 4]));
-
 function arrayProducts(array) {
-  var multiplied;
-  var result = [];
+  var beforeArray = [];
+  var productBefore = 1;
+  var productAfter = 1;
 
-  for(var i = 1; i< array.length; i++) {
-    var newArray = array.slice(i);
-    //console.log('newArray', newArray)
-    multiplied = newArray.reduce((a,b) => {
-      return a*b;
-    }, 1)
-    result.push(multiplied);
+  for(var i = 0; i<array.length; i++) {
+    beforeArray[i]= productBefore;
+    productBefore = array[i] * productBefore;
   }
-  return result;
+
+  for(var i = array.length-1; i>=0; i--) {
+    beforeArray[i]= beforeArray[i] * productAfter;
+    productAfter = array[i] * productAfter;
+  }
+
+  return beforeArray;
 }
 
-console.log(arrayProducts([1, 2, 3, 4]));
+//console.log(arrayProducts([1, 2, 3, 4]));
