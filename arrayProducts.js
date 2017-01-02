@@ -21,6 +21,12 @@ function arrayProducts(array) {
   var productBefore = 1;
   var productAfter = 1;
 
+  if(array.length === 0) {
+    return [];
+  } else if (array.length === 1){
+    return array;
+  }
+
   for(var i = 0; i<array.length; i++) {
     beforeArray[i]= productBefore;
     productBefore = array[i] * productBefore;
@@ -34,4 +40,4 @@ function arrayProducts(array) {
   return beforeArray;
 }
 
-//console.log(arrayProducts([1, 2, 3, 4]));
+console.log(arrayProducts([1,2,3]));
