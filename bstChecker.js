@@ -1,0 +1,3 @@
+function bstChecker(tree) {
+  
+}
