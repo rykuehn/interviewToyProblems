@@ -37,7 +37,7 @@ return rootNode.value;
 
 BinaryTreeNode.prototype.secondLargest = function(rootNode) {
   if(!rootNode && (!rootNode.right && !rootNode.left)) {
-    console.error('There musy be at least two nodes');
+    console.error('There must be at least two nodes');
   }
 
   let current = rootNode;
