@@ -37,6 +37,28 @@ function sumSwap(array1, array2) {
   return answer;
 }
 
+
+// function sumSwap(array1, array2) {
+//   const sumArray1 = array1.reduce((total, num) => total += num);
+//   const sumArray2 = array2.reduce((total, num) => total += num);
+
+//   for(var i = 0; i< array1.length; i++) {
+//     for(var j = 0; j< array2.length; j++) {
+//       let val1 = sumArray1 - array1[i] + array2[j];
+//       let val2 = sumArray2 - array2[j] + array1[i];
+
+//       if(val1 === val2) {
+//         return [val1, val2]
+//       }
+//     }
+//   }
+// };
+
+
+function sumSwam(array1, array2){
+  
+}
+
 const exercise1 = [20,3,2]; //3
 const exercise2 = [10,2,11]; //2
 
