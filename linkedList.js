@@ -10,10 +10,16 @@ var c = new LinkedListNode('C');
 a.next = b;
 b.next = c;
 
-LinkedListNode.prototype.deleteNode = function(which) {
-  if(this.value === which) {
-    this.next = null;
-  }
+deleteNode = function(nodeToDelete) {
+ var newNode = nodeToDelete.next;
+
+ if (newNode) {
+  nodeToDelete.next = newNode;
+  nodeToDelete.value = newNode.value;
+ }
+  
+ //console.log(newNode)
 }
 
-console.log(deleteNode());
+deleteNode(b);
+console.log(a)
