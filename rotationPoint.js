@@ -7,6 +7,7 @@ function findRotationPoint(words) {
     while (floorIndex < ceilingIndex) {
 
         var midIndex = Math.floor(floorIndex + ((ceilingIndex - floorIndex) / 2));
+        console.log({ceilingIndex, floorIndex, midIndex})
 
         if (words[midIndex] > firstWord) {
  
@@ -22,5 +23,4 @@ function findRotationPoint(words) {
 
     return ceilingIndex;
 }
-
-//console.log(findRotationPoint(['g', 'h', 'i', 'j', 'k', 'a', 'b']));
+console.log(findRotationPoint(['g', 'h', 'i', 'j', 'k', 'a', 'b']));
