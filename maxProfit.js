@@ -9,6 +9,7 @@ function getMaxProfit(array) {
   for(var earlierTime = 1; earlierTime < array.length; earlierTime++) {
    maxProfit = Math.max(array[earlierTime] - minPrice, maxProfit);
    minPrice = Math.min(minPrice, array[earlierTime]);
+   console.log({maxProfit, minPrice})
  }
  return maxProfit;
 }
